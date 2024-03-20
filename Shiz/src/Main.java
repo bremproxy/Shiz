@@ -1,35 +1,41 @@
-interface Animals {
-    void run();
-    void cry();
-}
-
-class Goose implements Animals {
+class Goose implements Yell {
     public void run() {
-        System.out.println("Гусь бежит быстро.");
+
+        System.out.println("Гусь бежит");
     }
 
-    public void cry() {
+    public void yells() {
         System.out.println("Гусь гогочет.");
     }
 }
 
-class Opossum implements Animals {
+class Opossum implements Yell {
     public void run() {
-        System.out.println("Опоссум бежит медленно.");
+
+        System.out.println("Опоссум бежит");
     }
 
-    public void cry() {
-        System.out.println("Опоссум издает звуки.");
+    public void yells() {
+        System.out.println("Опоссум ОРЁТ");
+    }
+}
+
+class Gardener implements Yell {
+    public void  run() {
+        System.out.println("Садовник бежит");
+    }
+    public void yells() {
+        System.out.println("Садовник вопит");
     }
 }
 
 public class Main {
     public static void main(String[] args) {
-        Animals[] animals = {new Goose(), new Opossum()};
+        Yell[] animals = {new Goose(), new Opossum(), new Gardener()};
 
-        for (Animals animal : animals) {
+        for (Yell animal : animals) {
             animal.run();
-            animal.cry();
+            animal.yells();
         }
     }
 }
