@@ -1,3 +1,5 @@
+package main;
+
 public interface Yell {
     void run();
     void yells();

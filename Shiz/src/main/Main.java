@@ -1,43 +1,8 @@
-class Goose implements Yell {
-    public void run() {
+package main;
 
-        System.out.println("Гусь бежит");
-    }
-
-    public void yells() {
-        System.out.println("Гусь гогочет.");
-    }
-    public char getSymbol() {
-        return 'H';
-    }
-}
-
-class Opossum implements Yell {
-    public void run() {
-
-        System.out.println("Опоссум бежит");
-    }
-
-    public void yells() {
-        System.out.println("Опоссум ОРЁТ");
-    }
-    public char getSymbol() {
-        return 'O';
-    }
-
-}
-
-class Gardener implements Yell {
-    public void  run() {
-        System.out.println("Садовник бежит");
-    }
-    public void yells() {
-        System.out.println("Садовник вопит");
-    }
-    public char getSymbol() {
-        return 'G';
-    }
-}
+import animals.Goose;
+import animals.Opossum;
+import animals.Gardener;
 
 public class Main {
     public static void main(String[] args) {
@@ -47,6 +12,7 @@ public class Main {
             animal.run();
             animal.yells();
         }
+
         int rows = 10;
         int cols = 10;
         char[][] field = new char[rows][cols];
